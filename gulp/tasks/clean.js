@@ -1,9 +1,7 @@
 import config from '../config';
-import gulp   from 'gulp';
-import del    from 'del';
+import clean from 'gulp-clean';
+import gulp from 'gulp';
 
 gulp.task('clean', function() {
-
-  return del([config.buildDir]);
-  
+  return gulp.src(config.buildDir, {force: true}).pipe(clean());
 });

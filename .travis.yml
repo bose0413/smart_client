@@ -1,15 +1,14 @@
 language: node_js
 node_js:
-  - "4.2"
-sudo: false
-
+- "8"
+branches:
+  only:
+  - master
+before_script:
+- npm install
 script:
-  - ./node_modules/.bin/gulp eslint
-  - ./node_modules/.bin/gulp test
-
-cache:
-  directories:
-    - node_modules
-
-addons:
-  sauce_connect: true
+- gulp prod
+deploy:
+  provider: firebase
+  token:
+    secure: dzStD8j+bX02WxaFTCB9v67+h/2jbSdNeYmCOHxs4yBUD0lLYs2XsgU50XfUE4QKOgSMUXwk+jdyB7Zr51lN9UsKyKDnYd47Lkff+LtdhmNMQ6Tumgzs9eggzPDOOk+r+L1lIgAQJ7KFmCd1SdG0GRbgvSM7bG0oNup6l+qcL75Os8spBMV/fhzESUyXzClwerb3z2fOwpNCWlJsKrL3JAtrkR4+s7VA2rY5CkwUiGZUQ4AwyOlEM6YOvyM9lq6w7LZA2Rk5T3UuepO+FETI44t3GMEpriJrOlLriSJ4Vw8rHaWCcgTHa7PDLgEbZmY/aEvXHP1E2qFgP9XJhjOKTiRtyJJGtNWGc4rgAlrHUdfK4a1TklcTx5H+XTpmFs0XkX7bvYbCplKQhphbqP4M88my8sYYayPEKywcC5bTgFGyvhbX1zg0y6KfuACNDIo5vWCG7jUcHNEAkIpGLE0hxxWp3TLYx2zGYfkraiTyiX6WxVeV1M43017sS9Gv/av5olueXrWkYqWy18lj1eWkv/9WHKlHJ/lw8UBUdNW+ON2QYYjZJWx0BarbgbpXibdGloIMihhkLYAgMenpsxpI6UxHmiafFUnq8h7rNRePDwDngIrO/KpANja2JPJ3tZ3u1BxPZzxro29s6hKlNs4jK2gFgwYZjjF4NXHZODM2RTE=
