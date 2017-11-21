@@ -1,5 +1,5 @@
-const istanbul = require('browserify-istanbul');
-const isparta  = require('isparta');
+// const istanbul = require('browserify-istanbul');
+// const isparta  = require('isparta');
 
 const karmaBaseConfig = {
 
@@ -16,7 +16,7 @@ const karmaBaseConfig = {
 
   browsers: ['Chrome'],
 
-  reporters: ['progress', 'coverage'],
+  reporters: ['progress'],
 
   autoWatch: true,
 
@@ -27,10 +27,10 @@ const karmaBaseConfig = {
       'babelify',
       'browserify-ngannotate',
       'bulkify',
-      istanbul({
-        instrumenter: isparta,
-        ignore: ['**/node_modules/**', '**/test/**']
-      })
+      // istanbul({
+      //   instrumenter: isparta,
+      //   ignore: ['**/node_modules/**', '**/test/**']
+      // })
     ]
   },
 
@@ -69,7 +69,8 @@ const ciAdditions = {
   },
   browsers: Object.keys(customLaunchers),
   customLaunchers: customLaunchers,
-  reporters: ['progress', 'coverage', 'saucelabs']
+  // reporters: ['progress', 'coverage', 'saucelabs']
+  reporters: ['progress', 'saucelabs']
 };
 
 module.exports = function(config) {
