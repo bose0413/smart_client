@@ -3,7 +3,7 @@ import runSequence from 'run-sequence';
 
 gulp.task('dev', ['clean'], function(cb) {
 
-  global.isProd = false;
+  global.isProd = true;
 
   runSequence(['styles', 'images', 'fonts', 'views'], 'browserify', 'watch', cb);
 

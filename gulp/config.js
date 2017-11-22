@@ -8,26 +8,26 @@ export default {
   buildDir: './build/',
 
   styles: {
-    src: 'app/styles/**/*.scss',
-    dest: 'build/css',
+    src: 'app/**/*.scss',
+    dest: 'build/css/',
     prodSourcemap: false,
     sassIncludePaths: []
   },
 
   scripts: {
-    src: 'app/js/**/*.js',
+    src: 'app/**/*.js',
     dest: 'build/js',
     test: 'test/**/*.js',
     gulp: 'gulp/**/*.js'
   },
 
   images: {
-    src: 'app/images/**/*',
-    dest: 'build/images'
+    src: 'app/assets/images/**/*',
+    dest: 'build/assets/images'
   },
 
   fonts: {
-    src: ['app/fonts/**/*'],
+    src: ['app/global/fonts/**/*'],
     dest: 'build/fonts'
   },
 
@@ -47,8 +47,8 @@ export default {
 
   views: {
     index: 'app/index.html',
-    src: 'app/views/**/*.html',
-    dest: 'app/js'
+    src: 'app/**/*.html',
+    dest: 'app/global'
   },
 
   gzip: {
@@ -59,7 +59,7 @@ export default {
 
   browserify: {
     bundleName: 'main.js',
-    prodSourcemap: false
+    prodSourcemap: true
   },
 
   test: {

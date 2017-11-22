@@ -14,7 +14,7 @@ function OnConfig($stateProvider, $locationProvider, $urlRouterProvider, $compil
     .state('Home', {
       url: '/',
       controller: 'HomeCtrl as vm',
-      templateUrl: 'home.html',
+      templateUrl: 'views/home/home.html',
       title: 'Home'
     });
 

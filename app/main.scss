@@ -1,5 +1,6 @@
-@import 'vars';
-@import 'typography';
+@import 'global/styles/vars';
+@import 'global/styles/typography';
+@import './**/*.scss';
 
 body {
   font-family: Helvetica, sans-serif;
