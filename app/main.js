@@ -1,4 +1,5 @@
 import angular from 'angular';
+import 'angularfire';
 
 // angular modules
 import constants from './global/js/constants';
@@ -15,6 +16,7 @@ import './directives';
 const requires = [
   'ui.router',
   'templates',
+  'firebase',
   'app.filters',
   'app.controllers',
   'app.services',

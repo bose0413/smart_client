@@ -1,4 +1,6 @@
-function OnConfig($stateProvider, $locationProvider, $urlRouterProvider, $compileProvider) {
+import firebase from 'firebase';
+
+function OnConfig($stateProvider, $locationProvider, $urlRouterProvider, $compileProvider, AppSettings) {
   'ngInject';
 
   if (process.env.NODE_ENV === 'production') {
@@ -20,6 +22,7 @@ function OnConfig($stateProvider, $locationProvider, $urlRouterProvider, $compil
 
   $urlRouterProvider.otherwise('/');
 
+  firebase.initializeApp(AppSettings.firebase);
 }
 
 export default OnConfig;
