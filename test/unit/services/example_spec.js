@@ -1,5 +1,5 @@
 describe('Unit: ExampleService', function() {
-
+/* eslint-disable */
   let http, service;
 
   beforeEach(function() {
@@ -29,4 +29,5 @@ describe('Unit: ExampleService', function() {
     // http.flush();
     done();
   });
+  /* eslint-enable */
 });

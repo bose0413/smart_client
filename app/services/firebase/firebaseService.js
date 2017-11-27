@@ -1,6 +1,6 @@
 import firebase from 'firebase';
 
-function FirebaseService($firebaseObject, AppSettings) {
+function FirebaseService($firebaseObject) {
   'ngInject';
 
   var database = firebase.database();

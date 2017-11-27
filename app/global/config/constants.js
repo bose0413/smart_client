@@ -7,16 +7,6 @@ const AppSettings = {
     authDomain: 'smart2home-13d8f.firebaseapp.com',
     databaseURL: 'https://smart2home-13d8f.firebaseio.com',
     storageBucket: 'smart2home-13d8f.appspot.com'
-  },
-
-  mqtt : {
-    server_name: "m21.cloudmqtt.com",
-    server_port: 31328,
-
-    user_name: "jppsiaiq",
-    user_password: "Pkcl5BsAqVZC",
-
-    device_mock: true
   }
 };
 
