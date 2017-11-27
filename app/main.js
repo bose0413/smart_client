@@ -2,9 +2,9 @@ import angular from 'angular';
 import 'angularfire';
 
 // angular modules
-import constants from './global/js/constants';
-import onConfig  from './global/js/on_config';
-import onRun     from './global/js/on_run';
+import constants from './global/config/constants';
+import onConfig  from './global/config/on_config';
+import onRun     from './global/config/on_run';
 import 'angular-ui-router';
 import './global/templates';
 import './filters';
